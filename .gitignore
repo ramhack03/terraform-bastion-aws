@@ -1,0 +1,22 @@
+# Terraform working directory
+.terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform plans
+*.tfplan
+tfplan
+
+# SSH private keys
+*.pem
+*.key
+
+# Secrets
+*.tfvars
+*.tfvars.json
+
+# OS files
+.DS_Store
+Thumbs.db
