@@ -1,16 +1,16 @@
-name: Terraform CI
+name: Terraform Plan
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
   terraform:
-    name: Terraform Validation
+    name: Terraform Plan
     runs-on: ubuntu-latest
 
     steps:
