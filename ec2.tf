@@ -10,10 +10,10 @@ resource "aws_instance" "bastion" {
 
   user_data = file("${path.module}/userdata.sh")
   tags = {
-  Name        = "Bastion-Host"
-  Environment = "Dev"
-  Project     = "Bastion-Architecture"
-}
+    Name        = "Bastion-Host"
+    Environment = "Dev"
+    Project     = "Bastion-Architecture"
+  }
   user_data_replace_on_change = true
 }
 
@@ -28,9 +28,9 @@ resource "aws_instance" "private" {
 
   user_data = file("${path.module}/userdata.sh")
   tags = {
-  Name        = "Private-EC2"
-  Environment = "Dev"
-  Project     = "Bastion-Architecture"
-}
+    Name        = "Private-EC2"
+    Environment = "Dev"
+    Project     = "Bastion-Architecture"
+  }
   user_data_replace_on_change = true
 }
