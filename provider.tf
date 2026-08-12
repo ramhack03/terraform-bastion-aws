@@ -1,4 +1,10 @@
 terraform {
+  backend "s3" {
+    bucket       = "terraform-bastion-state-211125513710"
+    key          = "terraform-bastion/terraform.tfstate"
+    region       = "us-east-1"
+    use_lockfile = true
+  }
   required_providers {
     aws = {
       source = "hashicorp/aws"
