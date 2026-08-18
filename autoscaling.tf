@@ -18,7 +18,7 @@ resource "aws_autoscaling_policy" "scale_in" {
 
 # High CPU Alarm
 resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "bastion-app-high-cpu"
+  alarm_name          = "bastion-app-high-cpu-v2"
   alarm_description   = "Scale out when average CPU exceeds 70%"
   comparison_operator = "GreaterThanThreshold"
 
@@ -40,7 +40,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
 
 # Low CPU Alarm
 resource "aws_cloudwatch_metric_alarm" "low_cpu" {
-  alarm_name          = "bastion-app-low-cpu"
+  alarm_name          = "bastion-app-low-cpu-v2"
   alarm_description   = "Scale in when average CPU is below 30%"
   comparison_operator = "LessThanThreshold"
 
