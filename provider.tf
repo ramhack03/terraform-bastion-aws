@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket       = "terraform-bastion-state-121445406968"
+    bucket       = "terraform-bastion-state-339713120550"
     key          = "terraform-bastion/terraform.tfstate"
     region       = "us-east-1"
     use_lockfile = true
