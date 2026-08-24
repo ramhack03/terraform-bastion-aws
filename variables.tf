@@ -62,3 +62,19 @@ variable "private_subnet_2_cidr" {
   type        = string
   default     = "10.0.4.0/24"
 }
+
+variable "db_name" {
+  description = "RDS database name"
+  type        = string
+}
+
+variable "db_username" {
+  description = "RDS master username"
+  type        = string
+}
+
+variable "db_password" {
+  description = "RDS master password"
+  type        = string
+  sensitive   = true
+}
