@@ -11,7 +11,7 @@ on:
 concurrency:
   group: terraform-state
   cancel-in-progress: false
-  
+
 jobs:
   terraform:
     name: Terraform Plan
@@ -45,4 +45,7 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan -input=false
-        
+        env:
+          TF_VAR_db_name: appdb
+          TF_VAR_db_username: admin
+          TF_VAR_db_password: ${{ secrets.DB_PASSWORD }}
