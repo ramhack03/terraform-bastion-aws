@@ -3,6 +3,10 @@ name: Terraform Apply
 on:
   workflow_dispatch:
 
+concurrency:
+  group: terraform-state
+  cancel-in-progress: false
+  
 jobs:
   terraform-apply:
     name: Terraform Apply
@@ -37,4 +41,3 @@ jobs:
           TF_VAR_db_name: appdb
           TF_VAR_db_username: admin
           TF_VAR_db_password: ${{ secrets.DB_PASSWORD }}
-        
